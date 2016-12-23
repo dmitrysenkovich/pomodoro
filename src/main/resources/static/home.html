@@ -1,0 +1,55 @@
+<html lang="en" ng-app="pomodoroApp" >
+    <head>
+        <title>Pomodoro - Your time's saviour</title>
+        <base href="/pomodoro/">
+
+        <link rel="shortcut icon" type="image/x-icon" href="images/pomodoro-logo.ico" />
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/portfolio-item.css" rel="stylesheet">
+
+        <!--=== Main Stylesheets ===-->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+
+        <!-- Other CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.vegas.css" />
+        <link rel="stylesheet" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" href="css/animate.css" />
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!--==== Slider and Card style plugin ====-->
+        <script type="text/javascript" src="js/jquery.vegas.min.js"></script>
+
+        <!--==== Custom Script files ====-->
+        <script type="text/javascript" src="js/effects-custom.js"></script>
+
+        <!--==== Angular ====-->
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/service/userService.js"></script>
+        <script type="text/javascript" src="js/service/taskService.js"></script>
+        <script type="text/javascript" src="js/controller/authorizationController.js"></script>
+        <script type="text/javascript" src="js/controller/dashboardController.js"></script>
+        <script type="text/javascript" src="js/controller/historyController.js"></script>
+        <script type="text/javascript" src="js/controller/profileController.js"></script>
+    </head>
+
+    <body ng-controller="authorizationController">
+        <section id="preloader">
+            <div class="loading-circle fa-spin"></div>
+        </section>
+        <div ng-include src="'templates/header.html'"></div>
+        <div ng-view ng-cloak></div>        
+    </body>
+</html>

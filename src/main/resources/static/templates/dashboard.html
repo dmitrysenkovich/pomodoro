@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header text-center">Welcome to Pomodoro</h1>
+        </div>
+    </div>
+
+    <div class="col-md-4" ng-repeat="task in tasks">
+        <div>
+            <span class="task-cover">
+                <h3>Task: {{ task.name }} <br> Estimated: {{ task.estimated }}m</h3>
+            </span>
+            <img class="img-responsive task center-block" src="images/task-background.png">
+        </div>
+    </div>
+</div>

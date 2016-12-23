@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header text-center">Welcome to Pomodoro</h1>
+        </div>
+    </div>
+
+    <div id="error-row" class="row" ng-show="errorMessage">
+        <div class="col-lg-4 col-lg-offset-4">
+            <div id="error-div" class="alert alert-danger text-center">
+                {{ errorMessage }}
+            </div>
+        </div>
+    </div>
+
+    <div id="login-form">
+        <div class="row bottom-padded">
+            <div class="col-lg-4 col-lg-offset-4">
+                <label for="login">Login:</label>
+                <input type="text" class="form-control" id="login" ng-model="user.login">
+            </div>
+        </div>
+        <div class="row bottom-padded">
+            <div class="col-lg-4 col-lg-offset-4">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" ng-model="user.email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" ng-model="user.password">
+            </div>
+        </div>
+    </div>
+
+    <div id="authentication-buttons" class="row">
+        <div class="col-lg-3 col-lg-offset-3">
+            <button id="sign-in-button" ng-click="signIn()"
+                class="btn btn-default center-block" type="button"><h6>Sign in</h6></button>
+        </div>
+        <div class="col-lg-3">
+            <button id="sign-up-button" ng-click="signUp()"
+                class="btn btn-default center-block" type="button"><h6>Sign up</h6></button>
+        </div>
+    </div>
+</div>
